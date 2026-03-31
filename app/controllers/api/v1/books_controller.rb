@@ -34,9 +34,13 @@ module Api
         head :no_content
       end
 
+      def generate_hundred_books
+        FillBooksJob.perform_async
+      end
+
       def render_not_found_response
         render json: {
-            error: "Infelizmente este livro não foi encontrado!"
+            error: "Infelizmente não foi encontrado essa request!"
         }
       end
 
