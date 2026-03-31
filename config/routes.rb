@@ -1,3 +1,8 @@
+require "sidekiq/web"
+require "rack/session/cookie"
+
+Sidekiq::Web.use Rack::Session::Cookie, secret: Rails.application.credentials.secret_key_base, same_site: true, max_age: 86400
+
 Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
@@ -9,4 +14,6 @@ Rails.application.routes.draw do
       resources :books, path: "/books"
     end
   end
+
+  mount Sidekiq::Web => "/sidekiq"
 end
