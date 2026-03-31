@@ -36,6 +36,7 @@ module Api
 
       def generate_ten_books_automatic
         FillBooksJob.perform_async
+        render json: { message: "Ok" }, status: :ok
       end
 
       def render_not_found_response

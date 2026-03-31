@@ -53,4 +53,26 @@ RSpec.describe "Api::V1::BooksController", type: :request do
     end
   end
 
+  describe "GET /api/v1/books/generate_ten_books_automatic" do
+    it "espera retornar status 200" do
+
+      books = Book.all
+      books.delete_all
+      books.reload
+
+      quantity = books.count
+
+      get generate_ten_books_automatic_api_v1_books_path
+      expect(response).to have_http_status(200)
+
+      sleep 120
+
+      books.reload
+      new_quantity = books.count
+
+      expect(new_quantity).to eq((quantity+10))
+
+    end
+  end
+
 end
