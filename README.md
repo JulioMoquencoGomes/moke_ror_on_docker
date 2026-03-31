@@ -1,6 +1,6 @@
 ## Projeto Ruby on Rails via Docker
 
-Comando para montarmos um docker compose com os containers de Rails, PostgreSQL e Redis:
+Comando para montarmos um docker compose com os containers de Rails, PostgreSQL Sidekiq e Redis:
 
 **docker-compose build**
 
