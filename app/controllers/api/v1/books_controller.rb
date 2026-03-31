@@ -4,7 +4,7 @@ module Api
       rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response 
       
       def index
-        render json: { book: Book.all }, status: :ok
+        render json: { books: Book.all }, status: :ok
       end
 
       def show
