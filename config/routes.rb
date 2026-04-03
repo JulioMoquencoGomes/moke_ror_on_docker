@@ -16,6 +16,8 @@ Rails.application.routes.draw do
       resources :books, path: "/books" do
         get 'generate_ten_books_automatic', on: :collection 
       end
+
+      get 'forecasts/:city', to: "forecasts#index"
     end
   end
 

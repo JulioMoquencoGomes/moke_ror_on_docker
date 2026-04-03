@@ -63,3 +63,5 @@ gem "faker", "~> 3.6", groups: [:development, :test]
 gem "sidekiq", "~> 8.1"
 
 gem 'rswag'
+
+gem 'httparty'

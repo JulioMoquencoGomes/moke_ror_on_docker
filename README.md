@@ -45,3 +45,7 @@ Link da documentação Api:
 A imagem abaixo é um exemplo de uma request do verbo Put utilizando o Swagger:
 
 ![Exemplo swagger](Images/example_swagger.png)
+
+Esta imagem abaixo, é de um exemplo testado após consumir uma api externa(Free Weather Api) com a gem HTTParty.
+
+![Exemplo swagger](Images/forecasts.png)
