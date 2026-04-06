@@ -22,4 +22,8 @@ RUN gem install pg
 ADD . /home/app/web
 WORKDIR /home/app/web
 
-RUN bundle install --jobs 5 --retry 5
+RUN bundle install
+COPY . /home/app/web
+
+EXPOSE 3000
+CMD ["rails", "server", "-b", "0.0.0.0"]
