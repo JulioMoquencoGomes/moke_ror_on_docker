@@ -81,7 +81,7 @@ Abaixo representa o monitoramento sendo feito pela plataforma de Observabilidade
 
 ### Utilizando mensageria Amazon AWS SQS
 \
-As imagens abaixos é de um teste realizado utilizando a fila de mensageria **SQS** da **Amazon AWS**.
+As imagens abaixos é de um teste realizado.
 \
 ![Exemplo SQS](Images/sqs1.png)
 \
